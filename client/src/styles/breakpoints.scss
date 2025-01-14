@@ -1,42 +1,49 @@
+// Define breakpoints for responsive design
 $breakpoints: (
-    "sm": 480px,
-    "mm": 580px,
-    "md": 720px,
-    "ml": 820px,
-    "lg": 1000px,
-    "xl": 1120px
+    "sm": 480px,  // Small screens, e.g., phones
+    "mm": 580px,  // Medium-small screens, slightly larger phones
+    "md": 720px,  // Medium screens, e.g., tablets
+    "ml": 820px,  // Medium-large screens, e.g., small laptops
+    "lg": 1000px, // Large screens, e.g., desktops
+    "xl": 1120px  // Extra-large screens, e.g., large desktops
 );
 
+// Mixin for small screens
 @mixin sm {
     @media (max-width: map-get($breakpoints, "sm")) {
         @content;
     }
 };
 
+// Mixin for medium-small screens
 @mixin mm {
     @media (max-width: map-get($breakpoints, "mm")) {
         @content;
     }
 };
 
+// Mixin for medium screens
 @mixin md {
     @media (max-width: map-get($breakpoints, "md")) {
         @content;
     }
 };
 
+// Mixin for medium-large screens
 @mixin ml {
     @media (max-width: map-get($breakpoints, "ml")) {
         @content;
     }
 };
 
+// Mixin for large screens
 @mixin lg {
     @media (max-width: map-get($breakpoints, "lg")) {
         @content;
     }
 };
 
+// Mixin for extra-large screens
 @mixin xl {
     @media (max-width: map-get($breakpoints, "xl")) {
         @content;
