@@ -7,7 +7,7 @@ import {
   BiSolidWasher, BiSolidDryer, BiSolidFirstAid, BiWifi, BiSolidFridge, BiWorld 
 } from "react-icons/bi";
 import { BsSnow, BsFillDoorOpenFill, BsPersonWorkspace } from "react-icons/bs";
-import { IoDiamond } from "react-icons/io5";
+// import { IoDiamond } from "react-icons/io5";
 import { MdMicrowave, MdBalcony, MdYard, MdPets } from "react-icons/md";
 import { 
   PiBathtubFill, PiCoatHangerFill, PiTelevisionFill 
