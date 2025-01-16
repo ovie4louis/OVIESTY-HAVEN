@@ -37,7 +37,7 @@ const ListingDetails = () => {
   useEffect(() => {
     getListingDetails();
     // eslint-disable-next-line react-hooks/exhaustive-deps
- }, []);
+  }, []);
 
   console.log(listing)
 
@@ -108,7 +108,7 @@ const ListingDetails = () => {
           {listing.listingPhotoPaths?.map((item) => (
             <img
               src={`http://localhost:3001/${item.replace("public", "")}`}
-              alt="listing "
+              alt="listing"
             />
           ))}
         </div>
@@ -128,7 +128,6 @@ const ListingDetails = () => {
             src={`http://localhost:3001/${listing.creator.profileImagePath.replace(
               "public",
               ""
-              
             )}`}
             alt="profile"
           />

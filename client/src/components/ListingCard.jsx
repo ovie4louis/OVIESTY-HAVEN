@@ -6,7 +6,7 @@ import {
   Favorite,
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";  
+import { useSelector, useDispatch } from "react-redux";
 import { setWishList } from "../redux/state";
 
 const ListingCard = ({
@@ -79,7 +79,7 @@ const ListingCard = ({
             <div key={index} className="slide">
               <img
                 src={`http://localhost:3001/${photo?.replace("public", "")}`}
-                alt={` ${index + 1}`}
+                alt={`photo ${index + 1}`}
               />
               <div
                 className="prev-button"

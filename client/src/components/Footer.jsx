@@ -1,5 +1,5 @@
 import "../styles/Footer.scss";  // Importing the styling for the footer component
-import {  LocalPhone, Email } from "@mui/icons-material";  // Importing icons for location, phone, and email
+import { LocationOn, LocalPhone, Email } from "@mui/icons-material"  // Importing icons for location, phone, and email
 
 // Footer functional component
 const Footer = () => {

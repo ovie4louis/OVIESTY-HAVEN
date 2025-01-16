@@ -1,3 +1,4 @@
+import React from 'react';
 // Importing necessary modules and components
 import { useEffect, useState } from "react"; // React hooks for managing state and side effects
 import "../styles/List.scss"; // Styles for the ReservationList component
