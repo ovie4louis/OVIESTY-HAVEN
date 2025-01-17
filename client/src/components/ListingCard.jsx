@@ -49,18 +49,22 @@ const ListingCard = ({
 
   const patchWishList = async () => {
     if (user?._id !== creator._id) {
-    const response = await fetch(
-      `http://localhost:3001/users/${user?._id}/${listingId}`,
-      {
-        method: "PATCH",
-        header: {
-          "Content-Type": "application/json",
-        },
+      try {
+        const response = await fetch(
+          `http://localhost:3001/users/${user?._id}/${listingId}`,
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const data = await response.json();
+        dispatch(setWishList(data.wishList));
+      } catch (error) {
+        console.error("Failed to update wishlist:", error);
       }
-    );
-    const data = await response.json();
-    dispatch(setWishList(data.wishList));
-  } else { return }
+    }
   };
 
   return (
@@ -79,13 +83,13 @@ const ListingCard = ({
             <div key={index} className="slide">
               <img
                 src={`http://localhost:3001/${photo?.replace("public", "")}`}
-                alt={`photo ${index + 1}`}
+                alt={`Slide ${index + 1}`}
               />
               <div
                 className="prev-button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  goToPrevSlide(e);
+                  goToPrevSlide();
                 }}
               >
                 <ArrowBackIosNew sx={{ fontSize: "15px" }} />
@@ -94,7 +98,7 @@ const ListingCard = ({
                 className="next-button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  goToNextSlide(e);
+                  goToNextSlide();
                 }}
               >
                 <ArrowForwardIos sx={{ fontSize: "15px" }} />

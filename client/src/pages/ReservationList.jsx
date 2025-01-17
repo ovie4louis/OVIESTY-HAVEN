@@ -38,6 +38,7 @@ const ReservationList = () => {
   // Fetch reservation list when the component mounts
   useEffect(() => {
     getReservationList();
+    //eslint-disable-next-line
   }, []);
 
   // Render the loader while data is being fetched

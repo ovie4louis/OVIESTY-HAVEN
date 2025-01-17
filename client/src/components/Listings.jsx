@@ -6,6 +6,7 @@ import Loader from "./Loader";  // Importing a Loader component to show while li
 import { useDispatch, useSelector } from "react-redux";  // Importing Redux hooks for managing global state
 import { setListings } from "../redux/state";  // Importing the Redux action to set listings in the state
 
+
 // Listings functional component
 const Listings = () => {
   const dispatch = useDispatch();  // Initializing Redux dispatch to update global state
@@ -34,11 +35,13 @@ const Listings = () => {
     }
   };
 
+  
+
   // Fetch listings whenever the selected category changes
   useEffect(() => {
-    getFeedListings();  // Call the getFeedListings function to fetch listings
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);  // Dependency array ensures this runs when selectedCategory changes
+  getFeedListings();
+}, [getFeedListings]);
+  // Dependency array ensures this runs when selectedCategory changes
 
   return (
     <>

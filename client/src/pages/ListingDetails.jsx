@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/ListingDetails.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { facilities } from "../data";
@@ -12,10 +12,10 @@ import { useSelector } from "react-redux";
 import Footer from "../components/Footer"
 
 const ListingDetails = () => {
-  const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(true);
 
-  const { listingId } = useParams();
-  const [listing, setListing] = useState(null);
+const { listingId } = useParams();
+const [listing, setListing] = useState(null);
 
   const getListingDetails = async () => {
     try {
@@ -36,7 +36,7 @@ const ListingDetails = () => {
 
   useEffect(() => {
     getListingDetails();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+   
   }, []);
 
   console.log(listing)
