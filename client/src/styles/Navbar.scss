@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  background-color: #C0C0C0;
 
   @include sm {
     padding: 10px 20px;
@@ -18,13 +19,14 @@
   }
 
   &_search {
-    border: 1px solid $grey;
+    border: 1px solid #808080;
     border-radius: 30px;
     height: 50px;
     padding: 0px 20px;
     display: flex;
     gap: 40px;
     align-items: center;
+    background-color: #808080;
 
     input {
       border: none;
@@ -47,9 +49,10 @@
 
     .host {
       text-decoration: none;
-      color: $blue;
+      color: #808080;
       font-weight: 700;
       cursor: pointer;
+    
 
       &:hover {
         color: $pinkred;
@@ -69,7 +72,7 @@
       border-radius: 30px;
       display: flex;
       gap: 10px;
-      background-color: white;
+      background-color: #808080;
       cursor: pointer;
 
       &:hover {
