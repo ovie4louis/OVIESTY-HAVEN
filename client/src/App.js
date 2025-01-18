@@ -35,6 +35,11 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Terms" element={<Terms />} />
           <Route path="/Refund" element={<Refund />} />
+         
+          
+          
+      
+
         </Routes>
       </BrowserRouter>
     </div>

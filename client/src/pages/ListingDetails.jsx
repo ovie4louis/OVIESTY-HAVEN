@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/ListingDetails.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { facilities } from "../data";
@@ -12,10 +12,10 @@ import { useSelector } from "react-redux";
 import Footer from "../components/Footer"
 
 const ListingDetails = () => {
-const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-const { listingId } = useParams();
-const [listing, setListing] = useState(null);
+  const { listingId } = useParams();
+  const [listing, setListing] = useState(null);
 
   const getListingDetails = async () => {
     try {
@@ -36,7 +36,6 @@ const [listing, setListing] = useState(null);
 
   useEffect(() => {
     getListingDetails();
-   
   }, []);
 
   console.log(listing)
@@ -108,7 +107,7 @@ const [listing, setListing] = useState(null);
           {listing.listingPhotoPaths?.map((item) => (
             <img
               src={`http://localhost:3001/${item.replace("public", "")}`}
-              alt="listing"
+              alt="listing photo"
             />
           ))}
         </div>
@@ -129,7 +128,6 @@ const [listing, setListing] = useState(null);
               "public",
               ""
             )}`}
-            alt="profile"
           />
           <h3>
             Hosted by {listing.creator.firstName} {listing.creator.lastName}
@@ -169,15 +167,15 @@ const [listing, setListing] = useState(null);
               <DateRange ranges={dateRange} onChange={handleSelect} />
               {dayCount > 1 ? (
                 <h2>
-                  ${listing.price} x {dayCount} nights
+                  ₦{listing.price} x {dayCount} nights
                 </h2>
               ) : (
                 <h2>
-                  ${listing.price} x {dayCount} night
+                  ₦{listing.price} x {dayCount} night
                 </h2>
               )}
 
-              <h2>Total price: ${listing.price * dayCount}</h2>
+              <h2>Total price: ₦{listing.price * dayCount}</h2>
               <p>Start Date: {dateRange[0].startDate.toDateString()}</p>
               <p>End Date: {dateRange[0].endDate.toDateString()}</p>
 
