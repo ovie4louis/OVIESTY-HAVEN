@@ -11,7 +11,11 @@ import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer"
 
+
+
+
 const ListingDetails = () => {
+
   const [loading, setLoading] = useState(true);
 
   const { listingId } = useParams();
@@ -90,6 +94,7 @@ const ListingDetails = () => {
       console.log("Submit Booking Failed.", err.message)
     }
   }
+  
 
   return loading ? (
     <Loader />

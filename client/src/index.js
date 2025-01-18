@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Render the application within the context of React Strict Mode and Redux
 root.render(
-  <React.StrictMode> 
+  <> 
     {/* React Strict Mode for highlighting potential problems during development */}
     <Provider store={store}> 
       {/* Wrap the app in the Redux Provider, passing the store to make Redux available throughout the app */}
@@ -19,5 +19,5 @@ root.render(
         <App />
       </PersistGate>
     </Provider>
-  </React.StrictMode>
+  </>
 );

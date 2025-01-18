@@ -3,4 +3,5 @@
   padding: 0; /* Removes any default padding applied by the browser */
   box-sizing: border-box; /* Ensures that padding and borders are included in the element's total width and height */
   font-family: 'Nunito', sans-serif; /* Applies the 'Nunito' font family to all elements */
+ 
 }
