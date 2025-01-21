@@ -1,7 +1,7 @@
 // Import custom styles for the Slide component
 import "../styles/Slide.scss";
 
-// Slide component definition
+//for Slide component definition
 const Slide = () => {
   return (
     // Main container for the slide section
