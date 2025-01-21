@@ -11,6 +11,7 @@ import Navbar from "../components/Navbar";
 import { useSelector } from "react-redux";
 import Footer from "../components/Footer"
 
+
 const ListingDetails = () => {
   const [loading, setLoading] = useState(true);
 

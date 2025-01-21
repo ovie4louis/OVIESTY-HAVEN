@@ -1,4 +1,4 @@
-// Importing specific icons from various icon libraries
+//For Importing specific icons from various icon libraries
 import { 
   FaPumpSoap, FaShower, FaFireExtinguisher, FaUmbrellaBeach, FaKey 
 } from "react-icons/fa";
