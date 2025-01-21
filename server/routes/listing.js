@@ -123,7 +123,7 @@ router.get("/search/:search", async (req, res) => {
     console.log(err)
   }
 })
-
+  
 /* LISTING DETAILS */
 router.get("/:listingId", async (req, res) => {
   try {

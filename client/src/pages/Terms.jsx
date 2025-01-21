@@ -4,7 +4,7 @@ import "../styles/Terms.scss";
 const Terms = () => {
   return (
     <div>
-    <title>Terms and Conditions</title>
+    <title>Terms and Conditions </title>
    
 
 <body>
